@@ -1,0 +1,7 @@
+<launch>
+		
+	<rosparam command="load" file="$(find object_tracking)/launch/params/target_finder.yaml"/>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/shared.yaml"/>
+	<node name="target_finder" pkg="object_tracking" type="target_finder.py" output="screen"/>
+
+</launch>

@@ -1,0 +1,17 @@
+obs_camera_width: 848 #x resolution of d435
+obs_camera_height: 480 #y resolution of d435
+height_change_radius: 9 #square radius of area around pixel to scan for height change
+height_change_threshold: 45 #how much the height must change in the above region.
+max_depth: 2000 #everything farther than this is assumed to be traversable.
+first_filter_radius: 5 #square radius of the are around pixel used for the first noise filter
+first_filter_cutoff: 26 #how many pixels within the area must be traversable to classify the area as traversable
+small_obstacle_pixels_needed: 10 #for the small obstacle filter, how many traversable pixels must be above and below the unpathable region to reclassify it as traversable
+max_obstacle_height: 80 #in mm how tall the obstacle can be
+max_depth_change: 315 #a limit how far laterally the "obstacle pixel" can be from traversable pixels, really just used to prevent some wierd shapes and edge cases
+top_min_dist: 400 #honestly this is a wierd parameter, supposed to be used to prevent obstacles from randomly flipping from untraversale to traversable as you get closer, the idea is that if an obstacle truly is traversable than it will disappear from the fov of camera before you get too close. 
+allowed_slope: 0 #Even stranger, I would just ignore for now, feel free to play around in grabDepth.py
+second_filter_radius: 22 #square radius of area around pixel used for first noise filter
+second_filter_cutoff: 200 #how many pixels in that area must be traversable
+max_obstacle_size: 100 #how big each obstacle circle can get in mm. 
+min_pixel_amount: 5 #how many points must be in each obstacle circle. If a circle has less points it is assumed to be noise
+

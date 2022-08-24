@@ -1,0 +1,9 @@
+<launch>
+
+
+	<rosparam command="load" file="$(find object_tracking)/launch/params/shared.yaml"/>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/navigator.yaml"/>
+	<node name="navigator" pkg="object_tracking" type="navigator.py" output="screen">
+		
+	</node>
+</launch>

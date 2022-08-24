@@ -1,0 +1,7 @@
+<launch>
+	
+	<rosparam command="load" file="$(find object_tracking)/launch/params/shared.yaml"/>
+	<node name="gimbal_controller" pkg="object_tracking" type="gimbal_controller.py" output="screen">
+
+	</node>
+</launch>

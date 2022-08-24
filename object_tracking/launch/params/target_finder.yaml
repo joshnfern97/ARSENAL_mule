@@ -1,0 +1,4 @@
+camera_width: 1280
+camera_height: 720
+distance_average_size: 5 #radius of the square area to sample depth around each pose point
+

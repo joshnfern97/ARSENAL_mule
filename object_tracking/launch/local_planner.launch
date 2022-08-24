@@ -1,0 +1,11 @@
+<launch>
+
+
+	<arg name="path_planner" default="vhf"/>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/shared.yaml"/>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/local_planner.yaml"/>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/obstacle_detector.yaml"/>
+	<param name="path_planner" value="$(arg path_planner)"/>
+	<node name="local_planner" pkg="object_tracking" type="local_planner.py" output="screen">
+	</node>
+</launch>

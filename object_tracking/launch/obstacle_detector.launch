@@ -1,0 +1,7 @@
+<launch>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/obstacle_detector.yaml"/>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/shared.yaml"/>
+	<node name="obstacle_detector" pkg="object_tracking" type= "obstacle_detector.py" output="screen">
+
+	</node>
+</launch>

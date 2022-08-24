@@ -1,0 +1,6 @@
+<launch>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/shared.yaml"/>
+	<node name = "logger" pkg = "object_tracking" type="logger.py" output="screen">
+	</node>
+
+</launch>

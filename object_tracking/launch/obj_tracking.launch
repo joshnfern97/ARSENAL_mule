@@ -1,0 +1,15 @@
+<launch>
+	<arg name="avoiding_obstacles" default="false"/>
+	<arg name="avoidance_method" default="vhf"/>
+
+
+	<param name="avoidance_method" value="$(arg avoidance_method)"/>
+	<include file="$(find object_tracking)/launch/target_finder.launch" pass_all_args="true"/>
+	<include file="$(find object_tracking)/launch/gimbal_controller.launch" pass_all_args="true"/>
+	<include file="$(find object_tracking)/launch/local_planner.launch" pass_all_args="true"/>
+	<include file="$(find object_tracking)/launch/navigator.launch" pass_all_args="true"/>
+	<include file="$(find object_tracking)/launch/obstacle_detector.launch" pass_all_args="true" if="$(arg avoiding_obstacles)"/>
+
+	<include file="$(find object_tracking)/launch/odom_edk.launch" pass_all_args="true"/>
+	<include file="$(find object_tracking)/launch/logger.launch" pass_all_args="true"/>
+</launch>

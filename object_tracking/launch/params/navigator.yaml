@@ -1,0 +1,12 @@
+angular_p_gain: 3 
+angular_d_gain: 3
+angular_deadband: .1
+max_angular: 3
+linear_p_gain: .008
+linear_d_gain: .012
+linear_deadband: 200
+max_linear: 3
+feed_forward_k: 0 #coefficent of feed forward loop
+const_vel: "" 
+
+

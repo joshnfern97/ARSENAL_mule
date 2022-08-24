@@ -1,0 +1,4 @@
+process_rate: 20
+foldername: ""
+desired_distance: 1250 #distance in mm to try and stay near the person
+start_running: True #whether the program is running on launch

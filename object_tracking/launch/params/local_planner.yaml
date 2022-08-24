@@ -1,0 +1,8 @@
+robot_radius: 350 #radius of robot for path planning
+influence_radius: 3000 #for apf, the max distance each obstacle has any influence on the robot
+max_attr: 2000 #max attractive force, right now also used for individual max repulsive force per obstacle
+k_attr: 1.25 #attractive coefficient
+obstacle_k_repl: 160 #repulsive coefficient
+gamma: 1 #shape of repulsive curve
+persistence_percent: .5 #what ratio of past repulsive force to current repulsive force to use
+
