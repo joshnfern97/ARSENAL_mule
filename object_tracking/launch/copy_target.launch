@@ -1,0 +1,17 @@
+<launch>
+
+
+	<rosparam command="load" file="$(find object_tracking)/launch/params/shared.yaml"/>
+	<rosparam command="load" file="$(find object_tracking)/launch/params/navigator_v2.yaml"/>
+
+    
+	<node name="navigator" pkg="object_tracking" type="navigator_v2.py" output="screen">
+	</node>
+
+    <node name="copy_target" pkg="object_tracking" type="copy_target.py" output="screen">
+	</node>
+
+    <node name="gps_rover" pkg="object_tracking" type="gps_publisher.py" output="screen">
+	</node>
+
+</launch>
